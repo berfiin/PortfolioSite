@@ -1,0 +1,13 @@
+﻿@model IEnumerable<KurumsalWebProjesi.Models.Model.Category>
+
+
+
+    <ul class="cat">
+        @foreach (var item in Model)
+        {
+            <li><i class="icon-angle-right"></i><a href="/Home/Blog/@item.CategoryId">(@item.Blogs.Count())</a><span> </span></li>
+
+        }
+
+
+    </ul>

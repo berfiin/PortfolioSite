@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+
+<section id="featured">
+    <!-- start slider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Slider -->
+              @{ 
+                  Html.RenderAction("SliderPartial", "Home");
+
+              }
+                <!-- end slider -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content">
+    <div class="container">
+ 
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="solidline">
+                </div>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="heading">Services</h4>
+                <div class="row">
+                    <section id="projects">
+                        <ul id="thumbs" class="portfolio">
+                       
+                            @foreach (var item in ViewBag.Services)
+                            {
+                                <li class="col-lg-3 design" data-id="id-0" data-type="web">
+                                    <div class="item-thumbs">
+                                       
+                                        <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="@item.Title"  href="@item.ImageURL" >
+                                            
+                                            <span class="overlay-img"></span>
+                                            <span class="overlay-img-thumb font-icon-plus">@Html.Raw(item.Title)</span>
+                                        </a>
+                                       
+                                        <img src="@item.ImageURL" alt="@item.Description">
+                                    </div>
+                                </li>
+
+                            }
+                           
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+< 

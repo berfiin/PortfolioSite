@@ -1,0 +1,16 @@
+﻿@model KurumsalWebProjesi.Models.Model.AboutMe
+@{
+    ViewBag.Title = "AboutMe";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+
+<div class="container">
+<div class="col-md-12">
+    <h4>About Me and My Project</h4>
+    <img src="~/Content/SiteLayout/img/dummies/dummy-1.jpg" alt="" class="align-center img-box img-responsive " />
+    <p>
+        @Html.Raw(Model.Description)
+    </p>
+</div>
+</div>
