@@ -1,3 +1,3 @@
 # PortfolioSite
- Personal website with admin panel (cv)
+ Personal website // admin panel (cv)
 .Net MVC
